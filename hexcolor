@@ -1,0 +1,1 @@
+for k in {16..231};do;echo -en "[48;5;${k}m  ";done

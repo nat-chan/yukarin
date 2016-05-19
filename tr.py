@@ -29,7 +29,7 @@ def mystr(hex):
     return "\033[48;5;"+str(hex)+"m  "
 
 def myshow(mt):
-    return "\n".join(["".join(j) for j in mt])
+    return "\033[0m\n".join(["".join(j) for j in mt])
 
 with open(sys.argv[1], 'r') as f:
     im = Image.open(f).convert("RGBA")

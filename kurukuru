@@ -1,0 +1,10 @@
+#!/bin/zsh
+array=()
+for k in ~/yukarin/4/*row
+	array+=`cat $k`
+
+	while :;do
+		echo -ne "\e[19A"
+		echo "$array[$((n++ % $#array +1))]"
+		sleep 0.3
+	done

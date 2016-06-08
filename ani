@@ -1,0 +1,11 @@
+#!/bin/zsh
+array=()
+for k in ~/yukarin/$1/*raw
+	array+=`cat $k`
+
+while :;do
+	txt="$array[$((n++ % $#array +1))]"
+	echo -ne "\e[0;0H"
+	echo "$txt"
+	sleep 0.3
+done

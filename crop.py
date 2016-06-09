@@ -10,9 +10,7 @@ im = Image.open(sys.argv[1]).convert("RGBA")
 mt = np.asarray(im)
 mt.flags.writeable = True
 #imm = Image.fromarray(mt, mode='RGBA')
-for k in range(20):
-	for l in range(20):
-		mt[k][l]=black
+mt[0:20][0:100]=black
 imm = Image.fromarray(mt)
 #imm.show()
 imm.save(sys.argv[2])

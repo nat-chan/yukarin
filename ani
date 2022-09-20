@@ -1,6 +1,7 @@
 #!/bin/zsh
+
 array=()
-for k in ~/yukarin/$1/*raw
+for k in $PWD/$1/*raw
 	array+=`cat $k`
 
 while :;do
